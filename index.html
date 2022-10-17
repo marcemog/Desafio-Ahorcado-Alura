@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="imagenes/logo.svg" class="logo">
+
+    <div id="div-desaparece" class="botones-home">
+    <a href="#forca">
+        <!-- button/input-->
+        <input class="btn-iniciar" type="submit" value="Iniciar Juego" id="iniciar-juego" onclick=IniciarJuego()></a>
+        <input class="btn-agr-palabra" type="submit" value="Agregar nueva palabra" id="palabra-nueva" onclick=ensenarPantallaDeAgregarPalabra()>
+    </div>
+    
+    <div>
+        <div id="agregar-palabra" class="palabra-nueva">
+            <input type="text" class="text-input" id="input-nueva-palabra" maxlength="8" placeholder="Ingrese una palabra">
+            <label for="input-texto"  id="etiqueta">🛈 Máx. 8 letras</label>
+     
+        <div class="botones">
+            <input class="btn-azul" type="submit" value="Guardar y empezar" id="btn-guardar">
+            <input class="btn-blanco" type="submit" value="Cancelar" id="btn-cancelar">
+        </div>
+    </div>
+
+
+    <div id="div-aparece-ahorcado" class="canvas">
+        <!--Canvas-->
+        <canvas id="horca" width="1200" height="860"></canvas>
+        <div class="subrayado">
+
+        </div>
+        <div class="botones-canvas">
+            <input class="btn-azul" type="submit" value="Nuevo Juego" id="btn-nuevo-juego">
+            <input class="btn-blanco" type="submit" value="Salir" id="btn-salir">
+        </div>
+    </div>
+
+<!--Javascript-->
+<script src="horca.js"></script>
+<script src="canvas.js"></script>
+</body>
+</html>
